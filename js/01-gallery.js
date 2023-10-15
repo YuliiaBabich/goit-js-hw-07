@@ -1,6 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 
-document.body.style.backgroundColor = 'rgba(231, 175, 204, 0.8)';
+document.body.style.backgroundColor = 'rgba(90, 99, 174, 0.47)';
 
 const galleryImage = document.querySelector('.gallery');
 const itemsMarkup = createGalleryImageMarkup(galleryItems);
@@ -11,7 +11,7 @@ function createGalleryImageMarkup(items) {
   return items
     .map(({ preview, original, description }) => {
       return `<div class="gallery__item"
-      style= "border-radius: 5%; box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+      style= "border-radius: 5%; box-shadow: inset 2px 2px 2px 0px rgba(70, 79, 157, 0.51),
     10px 10px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1)" >
   <a class="gallery__link" href="${original}" >  
     <img
@@ -19,8 +19,8 @@ function createGalleryImageMarkup(items) {
       src="${preview}"
       data-source="${original}"
       alt="${description}"
-      style= "border-radius: 5%; box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1)"
+      style= "border-radius: 5%; box-shadow: inset 2px 2px 2px 0px rgba(70, 79, 157, 0.51),
+    7px 7px 20px 0px rgba(70, 79, 157, 0.51), 4px 4px 5px 0px rgba(0, 0, 0, 0.1)"
     />
   </a>
 </div>`;
@@ -36,7 +36,7 @@ function onImgClick(event) {
 
 const instance = basicLightbox.create(
     `<img src="${event.target.dataset.source}" width="800" height="600" style= "border-radius: 5%; box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    10px 10px 20px 0px rgba(187, 122, 155, 0.8), 5px 5px 5px 0px rgba(0, 0, 0, 0.1)">`,
+    10px 10px 20px 0px rgba(70, 79, 157, 0.51), 5px 5px 5px 0px rgba(0, 0, 0, 0.1)">`,
 
     {
       onShow: () => {
