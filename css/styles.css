@@ -42,3 +42,8 @@
 .gallery__link:hover {
   cursor: zoom-in;
 }
+
+.modal {
+  width: 1000px;
+  height: 300%;
+}
